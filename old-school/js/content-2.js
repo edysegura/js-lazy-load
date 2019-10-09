@@ -4,11 +4,11 @@ Descrição: Content 2
 */
 
 var Content2 = {
-	
-	showContent: function() {
-		Index.showContent('Script "content-2.js" incluído.');
-	}
-	
+
+  showContent: function () {
+    Index.showContent('Script "content-2.js" incluído.');
+  }
+
 };
 
 //inicialização

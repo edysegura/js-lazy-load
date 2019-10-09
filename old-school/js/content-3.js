@@ -4,11 +4,11 @@ Descrição: Content 3
 */
 
 var Content3 = {
-	
-	showContent: function() {
-		Index.showContent('Script "content-3.js" incluído.');
-	}
-	
+
+  showContent: function () {
+    Index.showContent('Script "content-3.js" incluído.');
+  }
+
 };
 
 //inicialização
