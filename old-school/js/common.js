@@ -1,29 +1,23 @@
-/* JavaScript Document
-Autor: Edy Segura - edy@segura.pro.br
-Descrição: Objeto Literal Common
-*/
-
 var Common = {
 
-  includeJS: function (sSource) {
+  includeJS: function (jsFile) {
+    if (!Common.checkExistScript(jsFile)) {
+      var scriptTag = document.createElement('script');
 
-    if (!Common.checkExistScript(sSource)) {
-      var oScript = document.createElement('script');
+      scriptTag.type = "text/javascript";
+      scriptTag.src = jsFile; //+ "?" + (new Date()).getTime();
 
-      oScript.type = "text/javascript";
-      oScript.src = sSource; //+ "?" + (new Date()).getTime();
-      document.getElementsByTagName('head')[0].appendChild(oScript);
+      document.body.appendChild(scriptTag);
     }
-
   },
 
 
-  checkExistScript: function (sSource) {
-    var oScripts = document.getElementsByTagName('script');
-    var rePattern = new RegExp(sSource, "g");
+  checkExistScript: function (jsFile) {
+    var scriptTag = document.getElementsByTagName('script');
+    var rePattern = new RegExp(jsFile, "g");
 
-    for (var i = 0; i < oScripts.length; i++) {
-      if (rePattern.test(oScripts[i].src)) {
+    for (var i = 0; i < scriptTag.length; i++) {
+      if (rePattern.test(scriptTag[i].src)) {
         return true;
       }
     }
