@@ -1,7 +1,4 @@
-/* JavaScript Document
-Autor: Edy Segura - edy@segura.pro.br, edy@segura.pro.br
-Descrição: Content 2
-*/
+'use strict'
 
 var Content2 = {
 
@@ -11,5 +8,4 @@ var Content2 = {
 
 };
 
-//inicialização
 Event.addHandle(window, 'load', Content2.showContent);
