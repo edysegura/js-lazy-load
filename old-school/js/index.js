@@ -2,11 +2,11 @@
 
 var Index = {
 
-  showContent: function (sMessage) {
-    if (typeof sMessage == "string") {
-      var oParagrafo = document.createElement("p");
-      oParagrafo.innerHTML = sMessage;
-      document.body.appendChild(oParagrafo);
+  showContent: function (message) {
+    if (typeof message == "string") {
+      var paragraph = document.createElement("p");
+      paragraph.textContent = message;
+      document.body.appendChild(paragraph);
     }
   }
 
