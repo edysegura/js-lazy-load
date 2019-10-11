@@ -1,9 +1,9 @@
 'use strict'
 
-var Common = {
+var LazyLoader = {
 
   loadFile: function (jsFile) {
-    if (!Common.checkExistScript(jsFile)) {
+    if (!LazyLoader.isFileLoaded(jsFile)) {
       var scriptTag = document.createElement('script');
 
       scriptTag.type = "text/javascript";
@@ -15,7 +15,7 @@ var Common = {
   },
 
 
-  checkExistScript: function (jsFile) {
+  isFileLoaded: function (jsFile) {
     var scriptTag = document.getElementsByTagName('script');
     var rePattern = new RegExp(jsFile, "g");
 
