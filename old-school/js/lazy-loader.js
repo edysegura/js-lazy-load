@@ -8,7 +8,10 @@ var LazyLoader = {
 
       scriptTag.type = "text/javascript";
       scriptTag.src = jsFile; //+ "?" + (new Date()).getTime();
-      scriptTag.onload = function () { console.info('Script ' + jsFile + ' loaded!') }
+
+      scriptTag.onload = function () {
+        console.info('Script ' + jsFile + ' loaded!')
+      }
 
       document.body.appendChild(scriptTag);
     }
