@@ -8,4 +8,4 @@ var Content3 = {
 
 };
 
-Event.addHandle(window, 'load', Content3.showContent);
+Content3.showContent();
