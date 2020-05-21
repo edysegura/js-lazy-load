@@ -3,9 +3,9 @@
 var Content1 = {
 
   showContent: function () {
-    Index.showContent('Script "content-1.js" incluído.');
+    Index.showContent('Script "content-1.js" incluído.')
   }
 
-};
+}
 
-Content1.showContent();
+Content1.showContent()
